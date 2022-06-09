@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './App.css';
+// import './components/Title_Section'
 
 function App() {
   const [coins, setCoins] = useState([])
@@ -13,10 +14,9 @@ function App() {
     .catch(error => console.log(error));
   }, []);
 
-
-
   return (
     <div className='entire-page'>
+
       <h1>Applica</h1>
     </div>
   );
