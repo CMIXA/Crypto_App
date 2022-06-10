@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 import Title_Section from './components/Title_Section';
 import Crypto_Row from './components/Crypto_Row';
+import star from './images/star.png'
+
 
 function App() {
   const [crypto, setCrypto] = useState([]);
@@ -31,8 +33,11 @@ function App() {
   return (
     <div className='crypto-page'>
     <Title_Section/>
-      <div className='crypto-title-search'>
-        <h1>Top 100 Crypto of the day</h1>
+      <div className='crypto-search'>
+        <div className='crypto-search-title'>
+          <img src={star}/>
+          <h1>Top 100 Crypto of the day</h1>
+        </div>
         <form>
           <input
             className='crypto-input'
@@ -48,9 +53,9 @@ function App() {
             rank={crypto.market_cap_rank}
             image={crypto.image}
             name={crypto.name}
-            ticker={crypto.symbol}
+            ticker={crypto.symbol.toUpperCase()}
             price={crypto.current_price.toLocaleString()}
-            change24h_p={crypto.price_change_percentage_24h.toFixed(3)}
+            change24h_p={crypto.price_change_percentage_24h.toFixed(2)}
             change24h_$={crypto.price_change_24h.toFixed(4)}
             market_cap={crypto.market_cap.toLocaleString()}
           />

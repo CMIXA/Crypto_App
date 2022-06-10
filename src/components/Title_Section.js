@@ -1,5 +1,5 @@
 import React from 'react';
-import Blockchain from '../images/blockchain.png'
+import Blockchain from '../images/blockchain.png';
 
 const Title_Section = () => {
     return (
@@ -10,9 +10,8 @@ const Title_Section = () => {
                     <h1>Daily Crypto</h1>
                 </div>
                 <div className='Title-Big-Mover'>
-                    <h2>Biggest Mover of the Day</h2>
                     <div className='Big_Mover'>
-                        <h1>Hello</h1>
+                        <h2>Biggest Mover of the Day</h2>
                     </div>
                 </div>
             </div>

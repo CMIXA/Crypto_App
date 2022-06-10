@@ -15,16 +15,34 @@ body {
   display: flex;
 }
 
+/* ROW */
+
+.crypto-change {
+  width: 170px;
+}
+
+.crypto-name {
+  width: 150px;
+}
+
+.crypto-price {
+  width: 80px;
+}
+
+.crypto-rank {
+  width: 20px;
+}
+
+/* ROW */
+
 .crypto h3, img, p {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 .crypto_container {
-  /* background-color: rgb(28, 31, 33); */
   display: flex;
   justify-content: center;
-  /* padding: 10px 0; */
-  /* margin-top: 30px; */
+  /* margin: 0 10%; */
   text-align: left;
 }
 
@@ -34,19 +52,36 @@ body {
 }
 
 .crypto-input {
+  background-color: rgb(255, 255, 255);
   border-radius: 15px;
   border-color: transparent;
   color: black;
   margin-top: 20px;
-  padding: 10px;
-  width: 500px;
+  padding: 14px;
+  width: 550px;
+  min-width: 300px;
 }
 
-.crypto-title-search {
+.crypto-search {
   align-items: center;
+  margin: 0 10%;
   padding: 40px 0;
   display: flex;
   flex-direction: column;
+}
+
+/* .crypto-search form {
+  max-width: 550px;
+} */
+
+.crypto-search-title {
+  align-items: center;
+  display: flex;
+}
+
+.crypto-search-title img {
+  margin-right: 10px;
+  width: 60px;
 }
 
 .crypto_wrapper {
@@ -54,10 +89,11 @@ body {
   background-color: rgb(34, 34, 46);
   border-radius: 20px;
   display: flex;
-  height: 100px;
+  /* height: 80px; */
   margin: 10px 0;
-  padding: 0 20px;
-  width: 850px;
+  padding: 20px 20px;
+  max-width: 850px;
+  min-width: 400px;
 }
 
 .Big_Mover {
@@ -65,27 +101,27 @@ body {
   border-radius: 20px;
   margin-top: 5px;
   padding: 25px;
-  width: 100%;
+  width: 330px;
 }
 
 .Title {
   align-items: center;
-  background-color: rgb(21, 21, 24, 0.8);
-  border-radius: 20px;
-  padding: 0px 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  /* padding: 0px 30px; */
   display: flex;
+  height: 120px;
+  justify-content: center;
+  min-width: 350px;
 }
 
 .Title h1 {
   font-size: 37px;
-  /* background-color: rgba(26, 27, 54, 0.8); */
   border-radius: 5px;
-  /* padding: 5px 10px; */
-  /* margin: 10px 30px 10px 10px; */
 }
 
-.Title-Big-Mover {
-  /* margin-top: 50px; */
+.Title img {
+  margin-right: 10px;
 }
 
 .Title-Section-Conainter {
@@ -94,7 +130,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.25);
-  padding: 10px 20px 150px 20px;
+  padding: 80px 0px 120px 0px;
   /* padding: 100px 0; */
 }
 
@@ -102,5 +138,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 50px 140px;
+  /* margin-bottom: 30px; */
+  margin: 80px 10% ;
+  /* padding: 50px 140px; */
 }
