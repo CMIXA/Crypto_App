@@ -32,7 +32,7 @@ function App() {
     <div className='crypto-page'>
     <Title_Section/>
       <div className='crypto-title-search'>
-        <h1>Top 100 Crpto of the day</h1>
+        <h1>Top 100 Crypto of the day</h1>
         <form>
           <input
             className='crypto-input'
@@ -49,10 +49,10 @@ function App() {
             image={crypto.image}
             name={crypto.name}
             ticker={crypto.symbol}
-            price={crypto.current_price}
-            change24h_p={crypto.price_change_percentage_24h}
-            change24h_$={crypto.price_change_24h}
-            market_cap={crypto.market_cap}
+            price={crypto.current_price.toLocaleString()}
+            change24h_p={crypto.price_change_percentage_24h.toFixed(3)}
+            change24h_$={crypto.price_change_24h.toFixed(4)}
+            market_cap={crypto.market_cap.toLocaleString()}
           />
         );
       })}
