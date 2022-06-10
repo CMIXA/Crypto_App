@@ -31,7 +31,7 @@ function App() {
   return (
     <div className='crypto-page'>
     <Title_Section/>
-      <div className='crypto-search'>
+      <div className='crypto-title-search'>
         <h1>Top 100 Crpto of the day</h1>
         <form>
           <input
