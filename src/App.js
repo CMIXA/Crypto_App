@@ -38,7 +38,7 @@ function App() {
           <img src={star}/>
           <h1>Top 100 Crypto of the day</h1>
         </div>
-        <form>
+        <form className='crypto-search-form'>
           <input
             className='crypto-input'
             type='text'
@@ -47,6 +47,17 @@ function App() {
           />
         </form>
       </div>
+      {/* <div className='crypto-categories'>
+        <div className='crypto-categories-wrapper'>
+          <div>
+            <p className='crypto-rank'>Rank</p>
+            <p className=''>Symbol</p>
+            <p className='crypto-name'>Name/Ticker</p>
+            <p className='crypto-price'>Price</p>
+            <p className='crypto-change'>24h +/-</p>
+            <p className=''>Market Cap</p>
+        </div>
+      </div> */}
       {filteredCoins.map(crypto => {
         return (
           <Crypto_Row

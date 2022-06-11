@@ -13,9 +13,8 @@ body {
 .crypto {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
 }
-
-/* ROW */
 
 .crypto-change {
   width: 170px;
@@ -33,17 +32,32 @@ body {
   width: 20px;
 }
 
-/* ROW */
-
 .crypto h3, img, p {
   margin-right: 30px;
 }
 
+/* .crypto-categories {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+} */
+
+/* .crypto-categories-wrapper {
+  align-items: center;
+  background-color: rgb(12, 12, 66);
+  border-radius: 20px;
+  display: flex;
+  height: 80px;
+  margin: 10px 1%;
+  padding: 20px 20px;
+  max-width: 850px;
+  min-width: 400px;
+} */
+
 .crypto_container {
   display: flex;
   justify-content: center;
-  /* margin: 0 10%; */
-  text-align: left;
+  /* text-align: left; */
 }
 
 .crypto_container img {
@@ -58,8 +72,15 @@ body {
   color: black;
   margin-top: 20px;
   padding: 14px;
-  width: 550px;
-  min-width: 300px;
+  width: 100%;
+}
+
+.crypto-search-form {
+  width: 70%;
+}
+
+.crypto-page {
+  margin-bottom: 70px;
 }
 
 .crypto-search {
@@ -69,10 +90,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-/* .crypto-search form {
-  max-width: 550px;
-} */
 
 .crypto-search-title {
   align-items: center;
@@ -89,29 +106,38 @@ body {
   background-color: rgb(34, 34, 46);
   border-radius: 20px;
   display: flex;
-  /* height: 80px; */
-  margin: 10px 0;
+  margin: 10px 10%;
   padding: 20px 20px;
-  max-width: 850px;
-  min-width: 400px;
+  width: 900px;
+  /* max-width: 850px;
+  min-width: 400px; */
 }
 
-.Big_Mover {
+.Big-Mover {
   background-color: rgb(11, 16, 13);
   border-radius: 20px;
   margin-top: 5px;
   padding: 25px;
-  width: 330px;
+}
+
+.Title-Big-Mover img {
+  margin-right: 10px;
+  width: 50px;
+}
+
+.Title-Big-Mover {
+  align-items: center;
+  display: flex;
 }
 
 .Title {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
-  /* padding: 0px 30px; */
   display: flex;
   height: 120px;
   justify-content: center;
+  margin-bottom: 30px;
   min-width: 350px;
 }
 
@@ -131,14 +157,12 @@ body {
   background-repeat: no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.25);
   padding: 80px 0px 120px 0px;
-  /* padding: 100px 0; */
 }
 
 .Title-Section-Wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* margin-bottom: 30px; */
   margin: 80px 10% ;
-  /* padding: 50px 140px; */
 }
+
