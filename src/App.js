@@ -1,14 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './App.css';
-import Title_Section from './components/Title_Section';
+// import Title_Section from './components/Title_Section';
 import Crypto_Row from './components/Crypto_Row';
-import star from './images/star.png'
+import star from './images/trophy.png';
+import Blockchain from './images/blockchain.png';
+import Increase from './images/plus.png';
 
 
 function App() {
   const [crypto, setCrypto] = useState([]);
   const [search, setSearch] = useState('');
+  // const [mover, setMover] = useState([]);
 
   useEffect(() => {
     axios
@@ -17,10 +20,22 @@ function App() {
       )
       .then(res => {
         setCrypto(res.data);
-        console.log(res.data);
       })
       .catch(error => console.log(error));
   }, []);
+
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=1&page=1&sparkline=false'
+  //     )
+  //     .then(res => { 
+  //       setMover(res.data);
+  //     })
+  //     .catch(error => console.log(error));
+  // }, []);
+
+  // 
 
   const filteredCoins = crypto.filter(crypto =>
     crypto.name.toLowerCase().includes(search.toLowerCase())
@@ -32,7 +47,20 @@ function App() {
 
   return (
     <div className='crypto-page'>
-    <Title_Section/>
+      <div className='Title-Section-Conainter'>
+        <div className='Title-Section-Wrapper'>
+          <div className='Title'>
+            <img src={Blockchain} width='70'/>
+            <h1>Daily Crypto</h1>
+          </div>
+          <div className='Big-Mover'>
+            <div className='Title-Big-Mover'>
+              <img src={Increase}/>
+              <h2>Biggest Mover of the Day</h2>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className='crypto-search'>
         <div className='crypto-search-title'>
           <img src={star}/>
@@ -47,17 +75,6 @@ function App() {
           />
         </form>
       </div>
-      {/* <div className='crypto-categories'>
-        <div className='crypto-categories-wrapper'>
-          <div>
-            <p className='crypto-rank'>Rank</p>
-            <p className=''>Symbol</p>
-            <p className='crypto-name'>Name/Ticker</p>
-            <p className='crypto-price'>Price</p>
-            <p className='crypto-change'>24h +/-</p>
-            <p className=''>Market Cap</p>
-        </div>
-      </div> */}
       {filteredCoins.map(crypto => {
         return (
           <Crypto_Row

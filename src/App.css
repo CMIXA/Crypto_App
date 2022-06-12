@@ -8,6 +8,7 @@
 
 body {
   background-color: #070708;
+  font-size: 16px;
 }
 
 .crypto {
@@ -70,6 +71,7 @@ body {
   border-radius: 15px;
   border-color: transparent;
   color: black;
+  font-size: 16px;
   margin-top: 20px;
   padding: 14px;
   width: 100%;
@@ -86,7 +88,7 @@ body {
 .crypto-search {
   align-items: center;
   margin: 0 10%;
-  padding: 40px 0;
+  padding: 40px 0 30px 0;
   display: flex;
   flex-direction: column;
 }
@@ -97,7 +99,7 @@ body {
 }
 
 .crypto-search-title img {
-  margin-right: 10px;
+  margin-right: 15px;
   width: 60px;
 }
 
@@ -114,7 +116,7 @@ body {
 }
 
 .Big-Mover {
-  background-color: rgb(11, 16, 13);
+  background-color: rgb(4, 4, 4);
   border-radius: 20px;
   margin-top: 5px;
   padding: 25px;
@@ -163,6 +165,23 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 80px 10% ;
+  margin: 30px 10% ;
 }
 
+@media (max-width: 1024px) {
+
+  .crypto {
+    display: block;
+  }
+
+  .crypto h3,img,p {
+    margin-top: 15px;
+  }
+
+  .crypto_wrapper {
+    /* width: 400px; */
+    margin: 10px 22%;
+    padding: 10px 30px 20px 20px;
+  }
+
+}
