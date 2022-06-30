@@ -13,15 +13,15 @@ function App() {
   const [search, setSearch] = useState('');
   const [mover, setMover] = useState([]);
 
-  // const cryptolist = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
+  const cryptolistKey = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
 
-  // const bigmover = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=1&page=1&sparkline=false'
+  const bigmoverKey = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=1&page=1&sparkline=false'
 
   // API Get-Function for 100 Crypto of the Day
   useEffect(() => {
     axios
       .get(
-        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
+        cryptolistKey
       )
       .then(res => {
         setCrypto(res.data);
@@ -33,7 +33,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=1&page=1&sparkline=false'
+        bigmoverKey
       )
       .then(res => { 
         setMover(res.data);

@@ -101,6 +101,23 @@ body {
   padding: 25px;
 }
 
+.Big-Mover-Content {
+  display: flex;
+  margin: 20px 0;
+}
+
+.Big-Mover-Content img {
+  width: 60px;
+}
+
+.Big-Mover-Content-Text {
+  margin: 15px 0 0 0;
+}
+
+.Big-Mover-Content-Text h2 {
+  margin: 0 0 5px 0;
+}
+
 .Title-Big-Mover img {
   margin-right: 10px;
   width: 50px;
