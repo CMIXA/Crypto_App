@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './App.css';
-// import Title_Section from './components/Title_Section';
+import Big_Mover from './components/Big_Mover'
 import Crypto_Row from './components/Crypto_Row';
-import star from './images/trophy.png';
+import Star from './images/trophy.png';
 import Blockchain from './images/blockchain.png';
 import Increase from './images/plus.png';
 
@@ -11,8 +11,13 @@ import Increase from './images/plus.png';
 function App() {
   const [crypto, setCrypto] = useState([]);
   const [search, setSearch] = useState('');
-  // const [mover, setMover] = useState([]);
+  const [mover, setMover] = useState([]);
 
+  // const cryptolist = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
+
+  // const bigmover = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=1&page=1&sparkline=false'
+
+  // API Get-Function for 100 Crypto of the Day
   useEffect(() => {
     axios
       .get(
@@ -24,20 +29,32 @@ function App() {
       .catch(error => console.log(error));
   }, []);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=1&page=1&sparkline=false'
-  //     )
-  //     .then(res => { 
-  //       setMover(res.data);
-  //     })
-  //     .catch(error => console.log(error));
-  // }, []);
+  // // API Get-Function for Big Mover of the Day
+  useEffect(() => {
+    axios
+      .get(
+        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=1&page=1&sparkline=false'
+      )
+      .then(res => { 
+        setMover(res.data);
+      })
+      .catch(error => console.log(error));
+  }, []);
 
-  // 
 
-  const filteredCoins = crypto.filter(crypto =>
+
+  // Largest 24hperecentage Funtion 
+  //  Math.max.apply(Math, array.map(function(o) { return o.y; }))
+  // or
+  // Math.max(...array.map(o => o.y))
+
+  // const highestPercentage = Math.max(...mover.map(o => o.price_change_percentage_24h))
+
+  const filteredCrypto2 = mover.filter(crypto =>
+    crypto.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const filteredCrypto = crypto.filter(crypto =>
     crypto.name.toLowerCase().includes(search.toLowerCase())
   );
 
@@ -58,12 +75,22 @@ function App() {
               <img src={Increase}/>
               <h2>Biggest Mover of the Day</h2>
             </div>
+            {filteredCrypto2.map(mover => {
+              return (
+                <Big_Mover
+                  image={mover.image}
+                  name={mover.name}
+                  ticker={mover.symbol.toUpperCase()}
+                  change24h_p={mover.price_change_percentage_24h.toFixed(2)}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
       <div className='crypto-search'>
         <div className='crypto-search-title'>
-          <img src={star}/>
+          <img src={Star}/>
           <h1>Top 100 Crypto of the day</h1>
         </div>
         <form className='crypto-search-form'>
@@ -75,7 +102,7 @@ function App() {
           />
         </form>
       </div>
-      {filteredCoins.map(crypto => {
+      {filteredCrypto.map(crypto => {
         return (
           <Crypto_Row
             rank={crypto.market_cap_rank}
