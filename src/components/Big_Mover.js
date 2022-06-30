@@ -9,7 +9,7 @@ const Big_Mover = ({image, name, ticker, change24h_p}) => {
                 </div>
                 <div className='Big-Mover-Content-Text'>
                     <h2>{name} / {ticker}</h2>
-                    <h1>{change24h_p}</h1>
+                    <h2>{change24h_p}</h2>
                 </div>
             </div>
         </div>

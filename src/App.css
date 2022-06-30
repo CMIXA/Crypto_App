@@ -103,7 +103,7 @@ body {
 
 .Big-Mover-Content {
   display: flex;
-  margin: 20px 0;
+  margin: 15px 0 0 0;
 }
 
 .Big-Mover-Content img {
@@ -111,7 +111,7 @@ body {
 }
 
 .Big-Mover-Content-Text {
-  margin: 15px 0 0 0;
+  margin: 5px 0 0 0;
 }
 
 .Big-Mover-Content-Text h2 {

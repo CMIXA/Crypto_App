@@ -15,7 +15,7 @@ function App() {
 
   const cryptolistKey = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
 
-  const bigmoverKey = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=1&page=1&sparkline=false'
+  const bigmoverKey = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
 
   // API Get-Function for 100 Crypto of the Day
   useEffect(() => {
@@ -50,8 +50,8 @@ function App() {
 
   // const highestPercentage = Math.max(...mover.map(o => o.price_change_percentage_24h))
 
-  const filteredCrypto2 = mover.filter(crypto =>
-    crypto.name.toLowerCase().includes(search.toLowerCase())
+  const filteredCrypto2 = mover.filter(mover =>
+    mover.name.toLowerCase().includes(search.toLowerCase())
   );
 
   const filteredCrypto = crypto.filter(crypto =>
