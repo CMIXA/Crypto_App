@@ -94,40 +94,6 @@ body {
   width: 900px;
 }
 
-.Big-Mover {
-  background-color: rgb(4, 4, 4);
-  border-radius: 20px;
-  margin-top: 5px;
-  padding: 25px;
-}
-
-.Big-Mover-Content {
-  display: flex;
-  margin: 15px 0 0 0;
-}
-
-.Big-Mover-Content img {
-  width: 60px;
-}
-
-.Big-Mover-Content-Text {
-  margin: 5px 0 0 0;
-}
-
-.Big-Mover-Content-Text h2 {
-  margin: 0 0 5px 0;
-}
-
-.Title-Big-Mover img {
-  margin-right: 10px;
-  width: 50px;
-}
-
-.Title-Big-Mover {
-  align-items: center;
-  display: flex;
-}
-
 .Title {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);

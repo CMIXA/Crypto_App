@@ -4,7 +4,6 @@ import './App.css';
 import Crypto_Row from './components/Crypto_Row';
 import Star from './images/trophy.png';
 import Blockchain from './images/blockchain.png';
-import Increase from './images/plus.png';
 
 
 function App() {
