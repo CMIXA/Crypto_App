@@ -32,13 +32,22 @@ function App() {
     setSearch(e.target.value);
   };
 
+  // big-mover function
+  // - take in array
+  // 
+
   return (
     <div className='crypto-page'>
-      <div className='Title-Section-Conainter'>
-        <div className='Title-Section-Wrapper'>
-          <div className='Title'>
+      <div className='title-section-conainter'>
+        <div className='title-section-wrapper'>
+          <div className='title'>
             <img src={Blockchain} width='70'/>
             <h1>Daily Crypto</h1>
+          </div>
+        </div>
+        <div className='big-mover'>
+          <div className='big-mover-content'>
+
           </div>
         </div>
       </div>
