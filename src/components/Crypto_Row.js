@@ -16,7 +16,7 @@ const Crypto_Row = ({rank, image, name, ticker, price, change24h_p, change24h_$,
                     ) : (
                         <p className='crypto-pchange-positive'> +{change24h_p}%</p>
                     )}
-                    {change24h_$ <= 0 ? (
+                    {change24h_$ < 0 ? (
                         <p className='crypto-dchange-negative'> -{change24h_$.substring(1, index) + '$' + change24h_$.substring(index)}</p>
                     ) : (
                         <p className='crypto-dchange-positive'> +${change24h_$}</p>
