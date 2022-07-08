@@ -17,17 +17,27 @@ body {
   flex-wrap: wrap;
 }
 
-/* .crypto-change {
-  width: 170px;
-} */
+.crypto-change {
+  display: flex;
+  width: 210px;
+}
+
+.crypto-change-divider {
+  margin-right: 7px;
+  color: rgb(124, 124, 124);
+}
 
 .crypto-pchange-negative, .crypto-dchange-negative {
   color: rgb(247, 50, 50);
+  margin-right: 7px;
+  /* width: 100px; */
 }
 
 .crypto-pchange-positive,
 .crypto-dchange-positive {
   color: rgb(102, 255, 0);
+  margin-right: 7px;
+  /* width: 100px; */
 }
 
 .crypto-name {
@@ -146,6 +156,14 @@ body {
   .crypto {
     display: block;
   }
+
+  .crypto-change {
+    display: block;
+  }
+
+    .crypto-change-divider {
+      display: none;
+    }
 
   .crypto h3,img,p {
     margin-top: 15px;
